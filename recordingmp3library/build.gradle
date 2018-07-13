@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            jni.srcDirs = []//禁用as自动生成mk
+//        }
+//    }
+//    task ndkBuild(type: Exec, description: 'Compile JNI source via NDK') {
+//        commandLine "/Users/wanglei/Documents/ndk/ndk10/ndk-build",//配置ndk的路径
+//                'NDK_PROJECT_PATH=build/intermediates/ndk',//ndk默认的生成so的文件
+//                'NDK_LIBS_OUT=src/main/jniLibs',//配置的我们想要生成的so文件所在的位置
+//                'APP_BUILD_SCRIPT=src/main/jni/Android.mk',//指定项目以这个mk的方式
+//                'NDK_APPLICATION_MK=src/main/jni/Application.mk'//指定项目以这个mk的方式
+//    }
+//    tasks.withType(JavaCompile) {
+//            //使用ndkBuild
+//        compileTask -> compileTask.dependsOn ndkBuild
+//    }
+}
+
+//task makeJar(type: Copy) {
+//    //删除存在的
+//    delete 'build/libs/test.jar'
+//    //设置拷贝的文件
+//    from('build/intermediates/bundles/release')
+//    //打进jar包后的文件目录
+//    into('libs/')
+//    //讲classes.jar放入build/libs/目录下
+//    //include,exclude参数来设置过滤
+//    //（我们只关心classes.jar这个文件）
+//    include('classes.jar')
+//    //重命名
+//    rename('classes.jar', 'recordingmp3library.jar')
+//}
+//makeJar.dependsOn(build)
