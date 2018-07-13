@@ -43,9 +43,9 @@ javah -d jni -jni -classpath /Users/wanglei/Downloads/AndroidMp3Recorder-master2
 
 ----------------------------------------------------------------------------------------------------
 
-### jar包相关
+## jar包相关
 
-## jar中包含so的不能使用，因为so编译时的那个路径是jar中，所以跟可运行Modul不同，会报错，
+### jar中包含so的不能使用，因为so编译时的那个路径是jar中，所以跟可运行Modul不同，会报错，
 * 生成jar包，在依赖的Module中的build.gradle中最外层添加
 ```java
 task makeJar(type: Copy) {
