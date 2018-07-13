@@ -1,5 +1,5 @@
 #include "src/lame.h"
-#include "com_buihha_audiorecorder_SimpleLame.h"
+#include "com_myUtil_recordingmp3library_SimpleLame.h"
 
 static lame_global_flags *glf = NULL;
 
