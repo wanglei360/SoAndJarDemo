@@ -1,5 +1,5 @@
 # 可直接录制mp3
-## 感谢：#### [AndroidMp3Recorder](https://github.com/telescreen/AndroidMp3Recorder)
+## 感谢：[AndroidMp3Recorder](https://github.com/telescreen/AndroidMp3Recorder)
 ### [AndroidMp3Recorder](https://github.com/telescreen/AndroidMp3Recorder)有中文文档，好像更好用
 
 
@@ -8,7 +8,7 @@
 
 * 如果包名更改了，```main/jni/libmp3lame/Android.mk```中的倒数第二行的```.c```的文件需要更改。
 
-* src/main/jni/libmp3lame中的.c和.h的文件需要重新生成然后修改.c中的方法名，那个是跟路径相关的，必须改
+* src/main/jni/libmp3lame中的.c和.h的文件需要重新生成**然后**修改.c中的方法名，那个是跟路径相关的，必须改
 
 * 重新生成.h文件在Android studio中Terminal中使用命令
 javah -d jni -jni -classpath /Users/wanglei/Downloads/AndroidMp3Recorder-master2/recordingmp3library/build/intermediates/classes/debug com.myUtil.recordingmp3library.SimpleLame
